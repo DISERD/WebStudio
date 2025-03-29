@@ -7,26 +7,26 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
-        <h1><a href="./index.html">WebStudio</a></h1>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Студія</a></li>
+    <header class="header"></header>
+        <h1><a href="./index.html"><span class="blue">Web</span><span class="white">Studio</span></a></h1>
+        <nav class="header-list">
+            <ul class="header__nav-list">
+                <li><a href="./index.html" class="header__nav-link">Студія</a></li>
                 <li><a href="./portfolio.html">Портфоліо</a></li>
                 <li><a href="./index.html">Контакти</a></li>
             </ul>
         </nav>
-        <ul>
-            <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        <ul class="header__contacts">
+            <li><a href="mailto:info@devstudio.com" class="header__contacts">info@devstudio.com</a></li>
             <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
         </ul>
     </header>
-    <main>
-        <section>
+    <main class="main">
+        <section class="main__intro">
             <h2>Ефективні рішення для вашого бізнесу</h2>
-            <button type="button">Замовити послугу</button>
+            <button type="button" class="main__intro-button">Замовити послугу</button>
         </section>
-        <section>
+        <section class="main__features">
             <ul>
                 <li>
                     <h3>УВАГА ДО ДЕТАЛЕЙ</h3>
@@ -46,7 +46,7 @@
                 </li>
             </ul>
         </section>
-        <section>
+        <section class="main__activities">
             <h2>Чим ми займаємося</h2>
             <ul>
                 <li>
@@ -60,25 +60,25 @@
                 </li>
             </ul>
         </section>
-        <section>
+        <section class="main__team">
             <h2>Наша команда</h2>
             <ul>
-                <li>
+                <li class="main__team-item">
                     <img src="./img/man1.jpg" alt="Photo of Igor Dem'yanenko" lang="en">
-                    <h3>Ігор Демʼяненко</h3>
-                    <p>Product Designer</p>
+                    <h3 class="main__team-name">Ігор Демʼяненко</h3>
+                    <p class="main__team-role">Product Designer</p>
                 </li>
-                <li>
+                <li class="main__team-item">
                     <img src="./img/woman.jpg" alt="Photo of Olga Repina" lang="en">
-                    <h3>Ольга Рєпіна</h3>
-                    <p>Frontend Developer</p>
+                    <h3 class="main__team-name">Ольга Рєпіна</h3>
+                    <p class="main__team-role">Frontend Developer</p>
                 </li>
-                <li>
+                <li class="main__team-item">
                     <img src="./img/man2.jpg" alt="Photo of Mykola Tarasov" lang="en">
                     <h3>Микола Тарасов</h3>
                     <p>Marketing</p>
                 </li>
-                <li>
+                <li class="main__team-item">
                     <img src="./img/man3.jpg" alt="Photo of Mykhailo Yermakov" lang="en">
                     <h3>Михайло Єрмаков</h3>
                     <p>UI Designer</p>
@@ -86,8 +86,8 @@
             </ul>
         </section>
     </main>
-    <footer>
-        <h2><a href="./index.html">WebStudio</a></h2>
+    <footer class="footer">
+        <h2><a href="./index.html"><span class="blue">Web</span><span class="white">Studio</span></a></h2>
         <address>
             <p>м. Київ, пр-т Лесі Українки, 26</p>
         </address>
