@@ -1,0 +1,96 @@
+:root {
+    /* Logo Colors */
+    --color-blue: #007bff;
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* Background Colors */
+    --color-hero-bg: #2d2d37;
+    --color-team-bg: #f8f8f8;
+    --color-footer-bg: #2d2d37;
+
+    /* Text Colors */
+    --color-muted: #6c757d;
+    --color-footer-link: #ACACB0;
+
+    /* Button Colors */
+    --color-primary: #007bff;
+    --color-primary-hover: #0056b3;
+}
+
+.blue {
+    color: var(--color-blue);
+}
+
+.white {
+    color: var(--color-white);
+}
+
+.black {
+    color: var(--color-black);
+}
+
+body {
+    background-color: var(--color-white);
+}
+
+.header {
+    background-color: var(--color-white);
+}
+
+.hero-section {
+    background-color: var(--color-hero-bg);
+}
+
+.team-section {
+    background-color: var(--color-team-bg);
+}
+
+.footer {
+    background-color: var(--color-footer-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-black);
+}
+
+.hero-section h1 {
+    color: var(--color-white);
+}
+
+.text-light {
+    color: var(--color-white);
+}
+
+.text-dark {
+    color: var(--color-black);
+}
+
+.text-muted {
+    color: var(--color-muted);
+}
+
+.header__nav-list {
+    color: var(--color-black);
+}
+
+main > section > h2 {
+    color: var(--color-white);
+}
+
+footer > a {
+    color: var(--color-footer-link);
+}
+
+.button-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.button-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+footer > address > p {
+    color: var(--color-white);
+}
