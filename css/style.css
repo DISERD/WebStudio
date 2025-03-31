@@ -18,15 +18,15 @@
     --color-button-primary-hover: #0056b3;
 }
 
-.blue {
+.logo-accent{
     color: var(--brand-color);
 }
 
-.white {
+.footer-logo {
     color: var(--color-bg-light);
 }
 
-.black {
+.header-logo {
     color: var(--color-bg-dark);
 }
 
