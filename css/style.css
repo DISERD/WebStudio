@@ -115,6 +115,7 @@ main > section > h2 {
 
 .button-primary:hover {
     background-color: var(--color-button-primary-hover);
+}
 
 footer > a {
     color: var(--color-footer-link);
@@ -124,4 +125,9 @@ footer > a {
 footer > address > p {
     color: var(--color-bg-light);
     font-family: var(--font-secondary);
+}
+
+.footer a {
+    color: var(--color-footer-link);
+    font-family: var(--font-primary);
 }
