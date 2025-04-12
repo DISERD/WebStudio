@@ -16,70 +16,96 @@
     /* Button Colors */
     --color-button-primary: #007bff;
     --color-button-primary-hover: #0056b3;
+
+    /* Font Families */
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
 }
 
-.logo-accent{
+.logo-accent {
     color: var(--brand-color);
-}
-
-.footer-logo {
-    color: var(--color-bg-light);
-}
-
-.header-logo {
-    color: var(--color-bg-dark);
-}
-
-body {
-    background-color: var(--color-bg-light);
-}
-
-.header {
-    background-color: var(--color-bg-light);
-}
-
-.hero-section {
-    background-color: var(--color-hero-bg);
 }
 
 .team-section {
     background-color: var(--color-team-bg);
+    color: var(--color-bg-dark);
+    font-family: var(--font-primary);
 }
 
 .footer {
     background-color: var(--color-footer-bg);
+    color: var(--color-bg-light);
+    font-family: var(--font-secondary);
+}
+
+.header-logo {
+    color: var(--color-bg-dark);
+    font-family: var(--font-primary);
+}
+
+.footer-logo {
+    color: var(--color-bg-light);
+    font-family: var(--font-primary);
+}
+
+.header {
+    background-color: var(--color-bg-light);
+    color: var(--color-bg-light);
+    font-family: var(--font-primary);
+}
+
+
+.hero-section {
+    background-color: var(--color-hero-bg);
+    color: var(--color-bg-light);
+    font-family: var(--font-secondary);
+}
+
+
+
+body {
+    background-color: var(--color-bg-light);
+    font-family: var(--font-primary);
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--color-bg-dark);
+    font-family: var(--font-secondary);
+}
+
+.team-section h2 {
+    color: var(--color-bg-dark);
+    font-family: var(--font-primary);
 }
 
 .hero-section h1 {
     color: var(--color-bg-light);
+    font-family: var(--font-primary);
 }
 
 .text-light {
     color: var(--color-bg-light);
+    font-family: var(--font-secondary);
 }
 
 .text-dark {
     color: var(--color-bg-dark);
+    font-family: var(--font-primary);
 }
 
 .text-muted {
     color: var(--color-text-muted);
+    font-family: var(--font-secondary);
 }
 
 .header__nav-list {
     color: var(--color-bg-dark);
+    font-family: var(--font-primary);
 }
 
 main > section > h2 {
     color: var(--color-bg-light);
-}
-
-footer > a {
-    color: var(--color-footer-link);
+    font-family: var(--font-secondary);
 }
 
 .button-primary {
@@ -89,8 +115,13 @@ footer > a {
 
 .button-primary:hover {
     background-color: var(--color-button-primary-hover);
+
+footer > a {
+    color: var(--color-footer-link);
+    font-family: var(--font-primary);
 }
 
 footer > address > p {
     color: var(--color-bg-light);
+    font-family: var(--font-secondary);
 }
