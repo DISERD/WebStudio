@@ -8,6 +8,7 @@
     --color-hero-bg: #2F303A;
     --color-team-bg: #F5F4FA;
     --color-footer-bg: #2F303A;
+    --color-border: #EEEEEE;
 
     /* Text Colors */
     --color-text-light: #ffffff;
@@ -19,6 +20,7 @@
     /* Button Colors */
     --color-button-primary: #2196F3;
     --color-button-primary-hover: #0056b3;
+    --color-portfolio-categories: #f5f4fa;
 
     /* Font Families */
     --font-family: "Roboto", sans-serif;
@@ -95,6 +97,7 @@ body {
     border-radius: 4px;
     width: 216px;
     height: 50px;
+
     font-weight: 700;
     font-size: 16px;
     line-height: 187%;
@@ -215,4 +218,61 @@ body {
 }
 .footer-phone:hover {
     color: var(--color-button-primary);
+}
+
+/* Portfolio */
+
+
+
+.portfolio__category {
+    width: 216px;
+    height: 50px;
+
+    border-radius: 4px;
+        width: 112px;
+        height: 38px;
+    background: var(--color-portfolio-categories);
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 162%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--color-text-primary);
+}
+.portfolio__category:hover {
+    background: var(--color-button-primary);
+    color: var(--color-text-light);
+}
+
+.portfolio__category.current {
+    background: var(--color-button-primary);
+    color: var(--color-text-light);
+}
+
+.portfolio-item {
+    width: 370px;
+    height: 404px;
+    border: 1px solid var(--color-border);
+}
+
+.portfolio-image {
+    width: 370px;
+    height: 270px;
+}
+
+.portfolio__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 200%;
+    letter-spacing: 0.06em;
+    color: var(--color-text-primary);
+}
+
+.portfolio__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 187%;
+    letter-spacing: 0.03em;
+    color: var(--color-text-muted);
 }
