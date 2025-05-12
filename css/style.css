@@ -165,6 +165,10 @@ body {
 
 /* Team Section */
 
+.team {
+    background-color: var(--color-team-bg);
+}
+
 .team-title {
     font-weight: 700;
     font-size: 36px;
@@ -307,64 +311,235 @@ body {
     padding: 0 15px;
     margin: 0 auto;
     outline: 1px solid tomato;
+    display: flex;
+    align-items: center;
 }
+
+/* Header */
 
 .header {
     padding-top: 24px;
     padding-bottom: 25px;
-    border-bottom: 1px solid var(--color-border);
 }
+
+.header__logo {
+    margin-right: 93px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    white-space: nowrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+}
+
+/* Hero Section */
 
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+
+.hero-title {
+    margin-bottom: 30px;
+    margin-top: 0;
 }
 
 .hero-button {
-    font-family : var(--font-family);
-    font-size: 16px;
     display: block;
+    width: 216px;
+    height: 50px;
     margin: 30px auto;
-    padding: 12px 24px;
     text-align: center;
+    padding: 12px 24px;
 }
+
+/* Features */
 
 .features {
     padding-top: 94px;
 }
+
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.features-item {
+    margin-bottom: 0;
+}
+
+.features-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Activites */
 
 .activities {
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
+.activities > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.activities-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+
+.activities-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.activities-item {
+    margin-bottom: 0;
+}
+
+/* Team Section */
+
 .team {
     padding-top: 94px;
     padding-bottom: 94px;
 }
+
+.team > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-title {
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.team-item {
+    background-color: var(--color-bg-light);
+    margin-bottom: 0;
+}
+
+.team-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.team-name {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.team-role {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* Footer */
 
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
-.portfolio-buttton {
+.footer>.container {
     display: block;
-    gap: 10px;
-    padding: 10px 20px;
-    border: none;
-    font-size: 16px;
+    align-items: baseline;
+    gap: 70px;
 }
 
-.portfolio-container {
-    padding-top: 94px;
-    padding-bottom: 50px;
+.footer-info {
+    display: flex;
+    flex-direction: column;
 }
 
-.portfolio {
-    padding-bottom: 94px;
+.footer-logo {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.footer-address {
+    margin-top: 0;
+    margin-bottom: 9px;
+}
+
+.footer-address-text {
+    margin-top: 0;
+    margin-bottom: 9px;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
 }
 
 
+.footer-email,
+.footer-phone {
+    margin-top: 0;
+    margin-bottom: 9px;
+}
 
-
+.footer-phone {
+    margin-bottom: 0;
+}
