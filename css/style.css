@@ -587,13 +587,14 @@ body {
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px 30px;
     justify-content: center;
-    gap: 30px;
 }
 
 .portfolio-item {
     margin-bottom: 0;
     border: 1px solid var(--color-border);
+    flex-basis: calc((100% - 2 * 30px) / 3);
 }
 
 .portfolio__image {
