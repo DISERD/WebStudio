@@ -103,7 +103,7 @@ body {
 /* Hero Section */
 
 .hero {
-    background-color: var(--color-hero-bg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../img/background.jxl);
 }
 
 .hero-title {
@@ -672,4 +672,17 @@ body {
     background-size: 70px;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+/* Shadows */
+
+.team-item {
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.35);
+}
+
+.portfolio-item:hover {
+    box-shadow:
+    0px 2px 2px rgba(0, 0, 0, 0.1),
+    0px 6px 6px rgba(0, 0, 0, 0.25);
 }
