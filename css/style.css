@@ -103,7 +103,7 @@ body {
 /* Hero Section */
 
 .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../img/background.jxl);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../img/background.webp);
 }
 
 .hero-title {
@@ -632,7 +632,7 @@ body {
     width: 270px;
     height: 120px;
     margin-bottom: 20px;
-    background-image: url("../img/antenna.svg");
+    background-image: url("../img/antenna.webp");
     background-size: 70px;
     background-repeat: no-repeat;
     background-position: center;
@@ -644,7 +644,7 @@ body {
     width: 270px;
     height: 120px;
     margin-bottom: 20px;
-    background-image: url("../img/clock.svg");
+    background-image: url("../img/clock.webp");
     background-size: 70px;
     background-repeat: no-repeat;
     background-position: center;
@@ -656,7 +656,7 @@ body {
     width: 270px;
     height: 120px;
     margin-bottom: 20px;
-    background-image: url("../img/diagram.svg");
+    background-image: url("../img/diagram.webp");
     background-size: 70px;
     background-repeat: no-repeat;
     background-position: center;
@@ -668,7 +668,7 @@ body {
     width: 270px;
     height: 120px;
     margin-bottom: 20px;
-    background-image: url("../img/astronaut.svg");
+    background-image: url("../img/astronaut.webp");
     background-size: 70px;
     background-repeat: no-repeat;
     background-position: center;
@@ -685,4 +685,9 @@ body {
     box-shadow:
     0px 2px 2px rgba(0, 0, 0, 0.2),
     0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio__category.current,
+.portfolio__category:hover {
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.35);
 }
