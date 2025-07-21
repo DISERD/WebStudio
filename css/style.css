@@ -73,6 +73,7 @@ body {
     font-size: 14px;
     letter-spacing: 0.02em;
     color: var(--color-text-primary);
+    transition: color 0.3s ease-in-out;
 }
 .nav-link:hover {
     color: var(--color-button-primary);
@@ -90,6 +91,7 @@ body {
     font-size: 14px;
     letter-spacing: 0.02em;
     color: var(--color-text-muted);
+    transition: color 0.3s ease-in-out;
 }
 
 .contacts-link.current {
@@ -271,14 +273,23 @@ body {
     letter-spacing: 0.03em;
     text-align: center;
     color: var(--color-text-primary);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.portfolio__category:hover,
-.portfolio__button:hover,
+.portfolio__category:hover {
+    background-color: var(--brand-color);
+    color: var(--color-text-light);
+}
+
 .portfolio__category.current,
 .portfolio__button.current {
     background-color: var(--brand-color);
     color: var(--color-text-light);
+}
+
+.portfolio__category:hover .portfolio__button {
+    color: var(--color-text-light);
+
 }
 
 .portfolio-item {
@@ -387,9 +398,12 @@ body {
     width: 216px;
     height: 50px;
     text-align: center;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.hero-button:hover, .hero-button:focus { background-color: #188CE8; }
+.hero-button:hover, .hero-button:focus { 
+    background-color: #188CE8; 
+}
 
 
 /* Features */
@@ -596,6 +610,8 @@ body {
     margin-bottom: 0;
     border: 1px solid var(--color-border);
     flex-basis: calc((100% - 2 * 30px) / 3);
+
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .portfolio__image {
