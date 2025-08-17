@@ -150,7 +150,7 @@ body {
     color: var(--color-text-muted);
 }
 
-/* Activites */
+/* Activities */
 
 .activities-title {
     font-weight: 700;
@@ -163,6 +163,46 @@ body {
 .activities-image {
     width: 370px;
     height: 294px;
+}
+
+.activities-list {
+    display: flex;
+    gap: 30px;
+}
+
+.activities-label {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-text-light);
+}
+
+.activities-item {
+    flex-basis: calc((100% - 60px) / 3);
+}
+
+.activities-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.activities-thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    width: 100%;
+    background-color: rgba(47, 48, 58, 0.8);
+    padding: 20px;
+    text-align: center;
 }
 
 /* Team Section */
