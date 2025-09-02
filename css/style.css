@@ -1114,12 +1114,12 @@ body {
     display: flex;
     flex-direction: column;
 
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .modal-title {
-    padding-top: 30px;
-    padding-bottom: 14px;
+    margin-top: 30px;
+    margin-bottom: 14px;
 
     font-family: var(--font-family);
     font-weight: 700;
@@ -1136,7 +1136,7 @@ body {
     letter-spacing: 0.01em;
     color: var(--color-text-muted);
 
-    padding-bottom: 4px;
+    margin-bottom: 4px;
 }
 
 .form-label {
@@ -1155,7 +1155,7 @@ body {
     width: 448px;
     transition: border-color 0.3s ease-in-out;
 
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .form-label-text {
@@ -1248,7 +1248,7 @@ body {
     align-items: center;
     cursor: pointer;
 
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 
     font-family: var(--font-family);
     font-weight: 400;
