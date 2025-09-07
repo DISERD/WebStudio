@@ -1003,7 +1003,7 @@ body {
     width: 16px;
     height: 12px;
     fill: var(--color-text-muted);
-    transition: fill 0.3s ease-in-out;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -1011,7 +1011,7 @@ body {
     width: 10px;
     height: 16px;
     fill: var(--color-text-muted);
-    transition: fill 0.3s ease-in-out;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-email:hover,
@@ -1077,6 +1077,8 @@ body {
     border-radius: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
 
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .modal-close-button:hover .modal-close-icon {
@@ -1084,7 +1086,7 @@ body {
 }
 
 .modal-close-icon {
-    transition: fill 0.3s ease-in-out;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1164,6 +1166,8 @@ body {
     font-size: 12px;
     letter-spacing: 0.01em;
     color: var(--color-text-muted);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .label-form-textarea {
@@ -1175,7 +1179,7 @@ body {
     font-size: 14px;
     font-family: var(--font-family);
     outline: none;
-    transition: border-color 0.3s ease-in-out;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     padding: 12px 16px;
 }
@@ -1190,10 +1194,11 @@ body {
 
     font-size: 14px;
     font-family: var(--font-family);
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:hover {
-    transition: border-color 0.3s ease-in-out;
     border-color: var(--accent-color);
 }
 
@@ -1203,7 +1208,6 @@ body {
 
 .form-input:focus,
 .label-form-textarea:focus {
-    transition: border-color 0.3s ease-in-out;
     outline: none;
     border-color: var(--accent-color);
 }
@@ -1217,11 +1221,12 @@ body {
     height: 18px;
     fill: #212121;
     pointer-events: none;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-label:hover .form-icon,
 .form-label:focus .form-icon {
-    transition: fill 0.3s ease-in-out;
     fill: var(--accent-color);
 }
 
@@ -1235,12 +1240,10 @@ body {
 }
 
 .form-label:focus-within .form-label-text {
-    transition: color 0.3s ease-in-out;
     color: var(--accent-color);
 }
 
 .form-textarea:focus-within .form-label-text {
-    transition: color 0.3s ease-in-out;
     color: var(--accent-color);
 }
 
@@ -1289,9 +1292,10 @@ body {
     letter-spacing: 0.06em;
     text-align: center;
     color: var(--color-bg-light);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-submit:hover {
-    transition: background-color 0.3s ease-in-out;
     background-color: #1976D2;
 }
