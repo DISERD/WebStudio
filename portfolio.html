@@ -177,19 +177,66 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="container">
-            <h2 class="footer-logo">
-                <a href="./index.html" class="footer-logo-link">
-                    <span class="logo-accent">Web</span>
-                    <span class="logo-text light">Studio</span>
+    <div class="container footer-container">
+        <div class="footer-list">
+            <h3 class="footer__logo">
+                <a href="./index.html" class="logo-link">
+                    <span class="logo-accent">Web</span><span class="logo-text light">Studio</span>
                 </a>
-            </h2>
-            <address class="footer-address">
-                <p class="footer-address-text">м. Київ, пр-т Лесі Українки, 26</p>
-            </address>
-            <a href="mailto:info@devstudio.com" class="footer-email">info@devstudio.com</a>
-            <a href="tel:+380961111111" class="footer-phone">+38 096 111 11 11</a>
+            </h3>
+            <address class="footer-address">м. Київ, пр-т Лесі Українки, 26</address>
+            <div class="footer-contacts">
+                <a href="mailto:info@devstudio.com" class="footer-email">info@devstudio.com</a>
+                <a href="tel:+380961111111" class="footer-phone">+38 096 111 11 11</a>
+            </div>
         </div>
-    </footer>
+        <div class="footer-list">
+            <h3 class="join-text">приєднуйтесь</h3>
+            <ul class="join-list">
+                <li class="join-item">
+                    <a class="join-link" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <svg class="join-icon" width="20" height="20">
+                            <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="join-item">
+                    <a class="join-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                        <svg class="join-icon" width="20" height="20">
+                            <use href="./img/symbol-defs.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="join-item">
+                    <a class="join-link" href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <svg class="join-icon" width="20" height="20">
+                            <use href="./img/symbol-defs.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="join-item">
+                    <a class="join-link" href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                        <svg class="join-icon" width="20" height="20">
+                            <use href="./img/symbol-defs.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-list">
+            <h3 class="subscribe-title">Підпишіться на розсилку</h3>
+            <form class="subscribe-form">
+                <input type="email" name="email" class="subscribe-input" placeholder="E-mail" required />
+                <button type="submit" class="subscribe-button">
+                    Підписатися
+                    <svg class="subscribe-icon" width="20" height="20">
+                        <use href="./img/symbol-defs.svg#icon-send"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
+
+    </div>
+</footer>
 </body>
 </html>
