@@ -73,12 +73,10 @@ body {
 
 .logo-accent {
     color: var(--color-button-primary);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-text.dark {
     color: var(--color-text-dark);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav {
@@ -103,7 +101,6 @@ body {
     font-size: 14px;
     letter-spacing: 0.02em;
     color: var(--color-text-primary);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     white-space: nowrap;
     position: relative;
 }
@@ -119,24 +116,20 @@ body {
     background-color: #2196F3;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover::after,
 .nav-link.current::after {
-    transform: scaleX(1);
+    animation: scaleXFull 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .nav-link:hover,
 .nav-link.current {
-    color: #2196F3;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: changeColorToPrimary 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.nav-link:hover,
 .nav a:hover {
-    color: var(--color-button-primary);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: changeColorToPrimary 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .contacts {
@@ -152,12 +145,10 @@ body {
     font-size: 14px;
     letter-spacing: 0.02em;
     color: var(--color-text-muted);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover {
-    color: var(--color-button-primary);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: changeColorToPrimary 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 /* Hero Section */
@@ -171,7 +162,7 @@ body {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/background.webp);
 }
 
-.hero > .container {
+.hero>.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -204,13 +195,11 @@ body {
     letter-spacing: 0.06em;
     color: var(--color-text-light);
     background: var(--color-button-primary);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
 .hero-button:focus {
-    background-color: var(--color-button-primary-hover);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: heroButtonHover 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 /* Features */
@@ -232,7 +221,6 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--color-text-primary);
-
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -265,7 +253,6 @@ body {
     text-align: center;
     margin-bottom: 50px;
     margin-top: 0;
-
     font-weight: 700;
     font-size: 36px;
     letter-spacing: 0.03em;
@@ -313,12 +300,10 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 70px;
     width: 100%;
     background-color: rgba(47, 48, 58, 0.8);
     padding: 20px;
     text-align: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Team Section */
@@ -338,7 +323,6 @@ body {
 
 .team-item {
     background-color: var(--color-bg-light);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-title {
@@ -370,7 +354,6 @@ body {
 .team-name {
     margin-top: 30px;
     margin-bottom: 10px;
-
 }
 
 .team-role {
@@ -438,22 +421,18 @@ body {
     align-items: center;
     background-color: #FFFFFF;
     border-radius: 50%;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-icon {
     fill: #AFB1B8;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link:hover {
-    background-color: #2196F3;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: changeBgToPrimary 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .socials-link:hover .socials-icon {
-    fill: #FFFFFF;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: changeFillToWhite 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 /* Customers */
@@ -485,31 +464,27 @@ body {
     justify-content: center;
     border: 1px solid var(--customer-color);
     border-radius: 4px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers_icon {
     margin: 16px 32px;
     fill: var(--customer-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers_link:hover {
-    border-color: var(--brand-color);
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: changeBorderToBrand 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .customers_link:hover .customers_icon {
-    fill: var(--brand-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: changeFillToBrand 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 /* Footer */
 
 .footer {
     background-color: var(--color-footer-bg);
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 0;
+    color: #fff;
 }
 
 .footer-info {
@@ -538,7 +513,6 @@ body {
     margin-top: 0;
 }
 
-
 .footer-email,
 .footer-phone {
     margin-top: 0;
@@ -547,12 +521,6 @@ body {
 
 .footer-phone {
     margin-bottom: 0;
-}
-
-.footer {
-    background-color: #2f303a;
-    padding: 40px 0;
-    color: #fff;
 }
 
 .footer-container {
@@ -584,14 +552,11 @@ body {
     font-size: 26px;
     letter-spacing: 0.03em;
     color: #2196f3;
-
     padding-bottom: 20px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-text.light {
     color: var(--color-text-light);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-address {
@@ -601,7 +566,6 @@ body {
     letter-spacing: 0.03em;
     color: var(--color-text-light);
     padding-bottom: 9px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-email,
@@ -611,18 +575,11 @@ body {
     line-height: 171%;
     letter-spacing: 0.03em;
     color: var(--color-footer-link);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-email,
-.footer-phone {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-email:hover,
 .footer-phone:hover {
-    color: var(--accent-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: changeColorToAccent 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .join-list {
@@ -637,7 +594,6 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--color-text-light);
-
     margin-bottom: 20px;
 }
 
@@ -649,17 +605,14 @@ body {
     border-radius: 50%;
     width: 44px;
     height: 44px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-link:hover {
-    background-color: #2196f3;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: changeBgToPrimary 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .join-icon {
     fill: #fff;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-title {
@@ -668,7 +621,6 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--color-text-light);
-
     padding-bottom: 20px;
 }
 
@@ -686,14 +638,12 @@ body {
     padding: 15px 16px;
     box-sizing: border-box;
     outline: none;
-
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
     line-height: 125%;
     letter-spacing: 0.03em;
     color: var(--color-text-light);
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-input::placeholder {
@@ -708,15 +658,8 @@ body {
 
 .subscribe-input:focus {
     background-color: transparent;
-    border-color: var(--brand-color);
     outline: none;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.subscribe-input:focus-within input {
-    background-color: transparent !important;
-    border: 1px solid var(--accent-color);
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: changeBorderToBrand 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .subscribe-button {
@@ -726,73 +669,51 @@ body {
     padding: 10px 28px;
     background-color: var(--brand-color);
     border-radius: 4px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
     font-weight: 700;
     font-size: 16px;
     line-height: 187%;
     letter-spacing: 0.06em;
     text-align: center;
     color: var(--color-text-light);
-
     gap: 10px;
 }
 
 .subscribe-icon {
     fill: #fff;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-button:hover,
 .subscribe-button:focus {
-    background-color: var(--color-button-primary-hover);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: heroButtonHover 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
-
 
 /* Portfolio */
 
 .portfolio__category {
-    width: 216px;
-    height: 50px;
-
-    border-radius: 4px;
-    width: 112px;
+    width: auto;
     height: 38px;
+    border-radius: 4px;
     background: var(--color-portfolio-categories);
-
     font-weight: 500;
     font-size: 16px;
     line-height: 162%;
     letter-spacing: 0.03em;
     text-align: center;
     color: var(--color-text-primary);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    padding: 6px 22px;
 }
 
-.portfolio__category:hover {
-    background-color: var(--brand-color);
-    color: var(--color-text-light);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio__category.current,
-.portfolio__button.current {
-    background-color: var(--brand-color);
-    color: var(--color-text-light);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio__category:hover .portfolio__button {
-    color: var(--color-text-light);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.portfolio__category:hover,
+.portfolio__category.current {
+    animation: portfolioCategoryHover 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .portfolio-item {
     width: 370px;
     height: 404px;
     border: 1px solid var(--color-border);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-image {
@@ -827,19 +748,13 @@ body {
     gap: 8px;
 }
 
-.portfolio__category {
-    display: flex;
-    align-items: center;
-    padding: 6px 22px;
-    width: auto;
-}
-
 .portfolio__button {
     padding: 6px;
     border: none;
     text-align: center;
     cursor: pointer;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    color: inherit;
 }
 
 .portfolio {
@@ -850,16 +765,14 @@ body {
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px 30px;
+    gap: 30px;
     justify-content: center;
 }
 
 .portfolio-item {
     margin-bottom: 0;
     border: 1px solid var(--color-border);
-    flex-basis: calc((100% - 2 * 30px) / 3);
-
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    flex-basis: calc((100% - 60px) / 3);
 }
 
 .portfolio__image {
@@ -900,12 +813,10 @@ body {
     align-items: center;
     padding: 0 24px;
     transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover .portfolio-overlay {
-    transform: translateY(0);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: slideInFromBottom 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .portfolio-overlay-text {
@@ -971,20 +882,18 @@ body {
 /* Shadows */
 
 .team-item {
-    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.35);
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.35);
 }
 
 .portfolio-item:hover {
-    box-shadow:
-        0px 2px 2px rgba(0, 0, 0, 0.2),
-        0px 6px 6px rgba(0, 0, 0, 0.25);
+    animation: addPortfolioShadow 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .portfolio__category.current,
 .portfolio__category:hover {
-    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.35);
+    animation: addCategoryShadow 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards, portfolioCategoryHover 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
+
 
 /* Icons */
 
@@ -1003,28 +912,19 @@ body {
     width: 16px;
     height: 12px;
     fill: var(--color-text-muted);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .icon-smartphone {
     width: 10px;
     height: 16px;
     fill: var(--color-text-muted);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-email:hover,
-.icon-smartphone:hover {
-    fill: var(--color-button-primary);
 }
 
 .contacts-link:hover .icon-email,
 .contacts-link:focus .icon-email,
 .contacts-link:hover .icon-smartphone,
 .contacts-link:focus .icon-smartphone {
-    fill: var(--color-button-primary);
-    color: var(--color-button-primary);
+    animation: changeFillToPrimary 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 /* Modal */
@@ -1036,19 +936,18 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    opacity: 1;
     overflow: hidden;
-    transition: opacity 200ms cubic-bezier(0.83, -0.08, 0.32, 1) 100ms;
+    animation: fadeIn 200ms cubic-bezier(0.83, -0.08, 0.32, 1) 100ms forwards;
 }
 
 .backdrop.is-hidden {
-    opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    animation: fadeOut 200ms cubic-bezier(0.83, -0.08, 0.32, 1) 100ms forwards;
 }
 
 .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0);
+    animation: scaleOut 200ms cubic-bezier(0.83, -0.08, 0.32, 1) 100ms forwards;
 }
 
 .no-scroll {
@@ -1066,7 +965,7 @@ body {
     background-color: white;
     transform: translate(-50%, -50%) scale(1);
     overflow: hidden;
-    transition: transform 200ms cubic-bezier(0.83, -0.08, 0.32, 1) 100ms;
+    animation: scaleIn 200ms cubic-bezier(0.83, -0.08, 0.32, 1) 100ms forwards;
 }
 
 .modal-close-button {
@@ -1076,15 +975,13 @@ body {
     padding: 6px;
     border-radius: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button:hover .modal-close-icon {
-    fill: var(--accent-color);
+    animation: changeFillToAccent 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .modal-close-icon {
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1146,55 +1043,34 @@ body {
     display: flex;
     flex-direction: column;
     width: 448px;
-    transition: border-color 0.3s ease-in-out;
-
     margin-bottom: 20px;
-}
-
-.form-label-text {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 0.01em;
-    color: var(--color-text-muted);
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .label-form-textarea {
     width: 100%;
     height: 120px;
-
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     font-size: 14px;
     font-family: var(--font-family);
     outline: none;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
     padding: 12px 16px;
+    resize: none;
 }
 
 .form-input {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-
     height: 40px;
     padding-left: 42px;
     padding-right: 12px;
-
     font-size: 14px;
     font-family: var(--font-family);
-
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:hover {
-    border-color: var(--accent-color);
-}
-
-.form-label:focus .form-label-text {
-    color: var(--accent-color);
+.form-input:hover,
+.label-form-textarea:hover {
+    animation: changeBorderToAccent 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .form-input:focus,
@@ -1202,7 +1078,6 @@ body {
     outline: none;
     border-color: var(--accent-color);
 }
-
 
 .form-icon {
     position: absolute;
@@ -1212,39 +1087,23 @@ body {
     height: 18px;
     fill: #212121;
     pointer-events: none;
-
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-label:hover .form-icon,
-.form-label:focus .form-icon {
-    fill: var(--accent-color);
+.form-label:focus-within .form-icon {
+    animation: changeFillToAccent 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.label-form-textarea {
-    resize: none;
-    padding: 10px 12px;
-}
-
-.label-form-textarea:hover {
-    border-color: var(--accent-color);
-}
-
-.form-label:focus-within .form-label-text {
-    color: var(--accent-color);
-}
-
+.form-label:focus-within .form-label-text,
 .form-textarea:focus-within .form-label-text {
-    color: var(--accent-color);
+    animation: changeColorToAccent 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .form-checkbox {
     display: flex;
     align-items: center;
     cursor: pointer;
-
     margin-bottom: 30px;
-
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
@@ -1257,14 +1116,12 @@ body {
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #2196f3;
-
     padding-left: 5px;
 }
 
 .checkbox-input {
     width: 16px;
     height: 16px;
-
     margin-right: 7px;
 }
 
@@ -1272,10 +1129,8 @@ body {
     border-radius: 4px;
     width: 200px;
     height: 50px;
-
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background: #188ce8;
-
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 16px;
@@ -1283,10 +1138,203 @@ body {
     letter-spacing: 0.06em;
     text-align: center;
     color: var(--color-bg-light);
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-submit:hover {
     background-color: #1976D2;
+}
+
+
+/* Animations */
+
+@keyframes changeColorToPrimary {
+    from {
+        color: var(--color-text-primary);
+    }
+
+    to {
+        color: var(--color-button-primary);
+    }
+}
+
+@keyframes scaleXFull {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes heroButtonHover {
+    from {
+        background-color: var(--color-button-primary);
+    }
+
+    to {
+        background-color: var(--color-button-primary-hover);
+    }
+}
+
+@keyframes changeBgToPrimary {
+    from {
+        background-color: #FFFFFF;
+    }
+
+    to {
+        background-color: #2196F3;
+    }
+}
+
+@keyframes changeFillToWhite {
+    from {
+        fill: #AFB1B8;
+    }
+
+    to {
+        fill: #FFFFFF;
+    }
+}
+
+@keyframes changeBorderToBrand {
+    from {
+        border-color: var(--customer-color);
+    }
+
+    to {
+        border-color: var(--brand-color);
+    }
+}
+
+@keyframes changeFillToBrand {
+    from {
+        fill: var(--customer-color);
+    }
+
+    to {
+        fill: var(--brand-color);
+    }
+}
+
+@keyframes changeColorToAccent {
+    from {
+        color: var(--color-footer-link);
+    }
+
+    to {
+        color: var(--accent-color);
+    }
+}
+
+@keyframes portfolioCategoryHover {
+    from {
+        background-color: var(--color-portfolio-categories);
+        color: var(--color-text-primary);
+    }
+
+    to {
+        background-color: var(--brand-color);
+        color: var(--color-text-light);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes addPortfolioShadow {
+    from {
+        box-shadow: none;
+    }
+
+    to {
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2), 0px 6px 6px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@keyframes addCategoryShadow {
+    from {
+        box-shadow: none;
+    }
+
+    to {
+        box-shadow: 0 3px 2px rgba(0, 0, 0, 0.35);
+    }
+}
+
+@keyframes changeFillToPrimary {
+    from {
+        fill: var(--color-text-muted);
+    }
+
+    to {
+        fill: var(--color-button-primary);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes scaleOut {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+@keyframes changeFillToAccent {
+    from {
+        fill: #000000;
+    }
+
+    to {
+        fill: var(--accent-color);
+    }
+}
+
+@keyframes changeBorderToAccent {
+    from {
+        border-color: rgba(33, 33, 33, 0.2);
+    }
+
+    to {
+        border-color: var(--accent-color);
+    }
 }
