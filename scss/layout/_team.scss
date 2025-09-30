@@ -1,0 +1,48 @@
+.team {
+    padding: 94px 0;
+    background-color: $color-team-bg;
+}
+
+.team-title {
+    margin-bottom: 50px;
+    @include text-style(700, 36px, 1.17, 0.03em, $color-text-primary);
+    text-align: center;
+}
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.team-item {
+    background-color: $color-bg-light;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
+
+    flex-basis: 100%;
+
+    @include breakpoint(tablet) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @include breakpoint(desktop) {
+        flex-basis: calc((100% - 90px) / 4);
+    }
+}
+
+.team-member-info {
+    padding: 30px 15px;
+}
+
+.team-name {
+    margin-bottom: 10px;
+    @include text-style(500, 16px, 1.19, 0.03em, $color-text-primary);
+}
+
+.team-role {
+    margin-bottom: 16px;
+    @include text-style(400, 16px, 1.19, 0.03em, $color-text-muted);
+}

@@ -1,16 +1,25 @@
+// base
 @import "base/variables";
 @import "base/reset";
-@import "base/mixins";
+@import "base/typography";
 
-@import "components/page-header";
+// utils
+@import "utils/mixins";
+@import "utils/functions";
+
+// layout
+@import "layout/header";
+@import "layout/hero";
+@import "layout/features";
+@import "layout/activities";
+@import "layout/team";
+@import "layout/customers";
+@import "layout/portfolio";
+@import "layout/footer";
+@import "layout/modal";
+
+// components
 @import "components/logo";
 @import "components/nav";
-@import "components/hero";
-@import "components/features";
-@import "components/activities";
-@import "components/team";
-@import "components/customers";
-@import "components/footer";
-@import "components/portfolio";
-@import "components/modal";
+@import "components/button";
 @import "components/animations";

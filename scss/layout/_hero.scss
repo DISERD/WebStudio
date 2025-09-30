@@ -1,0 +1,17 @@
+.hero {
+    padding: 200px 0;
+    background-color: $color-hero-bg;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/background.webp);
+    text-align: center;
+}
+
+.hero>.container {
+    @include flex-center;
+    flex-direction: column;
+}
+
+.hero-title {
+    margin-bottom: 30px;
+    @include text-style(900, 44px, 1.36, 0.06em, $color-text-light);
+    text-transform: uppercase;
+}

@@ -1,0 +1,64 @@
+.footer {
+    padding: 60px 0;
+    background-color: $color-footer-bg;
+}
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+    gap: 94px;
+}
+
+.footer-address {
+    font-style: normal;
+    margin-top: 20px;
+}
+
+.footer-address-text {
+    margin-bottom: 9px;
+    @include text-style(400, 14px, 1.71, 0.03em, $color-text-light);
+}
+
+.footer-email,
+.footer-phone {
+    display: block;
+    @include text-style(400, 14px, 1.71, 0.03em, $color-footer-link);
+    @include transition(color);
+
+    &:not(:last-child) {
+        margin-bottom: 9px;
+    }
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.join-text,
+.subscribe-title {
+    margin-bottom: 20px;
+    @include text-style(700, 14px, 1.14, 0.03em, $color-text-light);
+    text-transform: uppercase;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 12px;
+}
+
+.subscribe-input {
+    width: 358px;
+    padding: 15px 16px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
+    @include text-style(400, 16px, 1.25, 0.03em, $color-text-light);
+    @include placeholder;
+    @include transition(border-color);
+
+    &:focus {
+        border-color: $brand-color;
+    }
+}

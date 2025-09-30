@@ -1,0 +1,46 @@
+.features {
+    padding: 94px 0;
+}
+
+.features-list {
+    display: flex;
+    gap: 30px;
+}
+
+.features-item::before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: $color-team-bg;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+}
+
+.features-item:nth-child(1)::before {
+    background-image: url("../img/antenna.webp");
+}
+
+.features-item:nth-child(2)::before {
+    background-image: url("../img/clock.webp");
+}
+
+.features-item:nth-child(3)::before {
+    background-image: url("../img/diagram.webp");
+}
+
+.features-item:nth-child(4)::before {
+    background-image: url("../img/astronaut.webp");
+}
+
+.features-title {
+    margin-bottom: 10px;
+    @include text-style(700, 14px, 1.14, 0.03em, $color-text-primary);
+    text-transform: uppercase;
+}
+
+.features-text {
+    @include text-style(400, 14px, 1.71, 0.03em, $color-text-muted);
+}
