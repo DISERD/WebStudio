@@ -1,3 +1,4 @@
+/* CSS Reset */
 h1,
 h2,
 h3,
@@ -6,7 +7,7 @@ p {
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
 }

@@ -1,22 +1,19 @@
-.logo {
-    font-family: $second-family;
+.header__logo,
+.footer__logo {
+    font-family: var(--second-family);
     font-weight: 700;
     font-size: 26px;
     letter-spacing: 0.03em;
 }
 
-.header__logo {
-    margin-right: 93px;
-}
-
 .logo-accent {
-    color: $brand-color;
+    color: var(--color-button-primary);
 }
 
 .logo-text.dark {
-    color: $color-text-dark;
+    color: var(--color-text-dark);
 }
 
 .logo-text.light {
-    color: $color-text-light;
+    color: var(--color-text-light);
 }

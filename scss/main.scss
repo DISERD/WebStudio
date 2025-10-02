@@ -1,25 +1,21 @@
-// base
-@import "base/variables";
-@import "base/reset";
-@import "base/typography";
+@import "./base/reset";
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+@import "./utils/animations";
+@import "./base/common";
+@import "./components/container";
+@import "./components/buttons";
+@import "./components/logo";
+@import "./components/socials";
+@import "./components/modal";
+@import "./components/nav";
 
-// utils
-@import "utils/mixins";
-@import "utils/functions";
-
-// layout
-@import "layout/header";
-@import "layout/hero";
-@import "layout/features";
-@import "layout/activities";
-@import "layout/team";
-@import "layout/customers";
-@import "layout/portfolio";
-@import "layout/footer";
-@import "layout/modal";
-
-// components
-@import "components/logo";
-@import "components/nav";
-@import "components/button";
-@import "components/animations";
+@import "./layout/01-header";
+@import "./layout/02-hero";
+@import "./layout/03-features";
+@import "./layout/04-activities";
+@import "./layout/05-team";
+@import "./layout/06-customers";
+@import "./layout/07-footer";
+@import "./layout/08-portfolio";

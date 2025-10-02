@@ -1,0 +1,43 @@
+/* Customers */
+
+.customers {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.section_title {
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--color-text-primary);
+    padding-bottom: 50px;
+}
+
+.customers_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.customers_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--customer-color);
+    border-radius: 4px;
+}
+
+.customers_icon {
+    margin: 16px 32px;
+    fill: var(--customer-color);
+}
+
+.customers_link:hover {
+    animation: changeBorderToBrand 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.customers_link:hover .customers_icon {
+    animation: changeFillToBrand 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
