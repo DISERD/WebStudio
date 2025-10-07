@@ -2,11 +2,11 @@
 
 @keyframes changeColorToPrimary {
     from {
-        color: var(--color-text-primary);
+        color: $color-text-primary;
     }
 
     to {
-        color: var(--color-button-primary);
+        color: $color-button-primary;
     }
 }
 
@@ -22,73 +22,73 @@
 
 @keyframes heroButtonHover {
     from {
-        background-color: var(--color-button-primary);
+        background-color: $color-button-primary;
     }
 
     to {
-        background-color: var(--color-button-primary-hover);
+        background-color: $color-button-primary-hover;
     }
 }
 
 @keyframes changeBgToPrimary {
     from {
-        background-color: #FFFFFF;
+        background-color: $color-bg-light;
     }
 
     to {
-        background-color: #2196F3;
+        background-color: $brand-color;
     }
 }
 
 @keyframes changeFillToWhite {
     from {
-        fill: #AFB1B8;
+        fill: $color-icon-muted;
     }
 
     to {
-        fill: #FFFFFF;
+        fill: $color-text-light;
     }
 }
 
 @keyframes changeBorderToBrand {
     from {
-        border-color: var(--customer-color);
+        border-color: $customer-color;
     }
 
     to {
-        border-color: var(--brand-color);
+        border-color: $brand-color;
     }
 }
 
 @keyframes changeFillToBrand {
     from {
-        fill: var(--customer-color);
+        fill: $customer-color;
     }
 
     to {
-        fill: var(--brand-color);
+        fill: $brand-color;
     }
 }
 
 @keyframes changeColorToAccent {
     from {
-        color: var(--color-footer-link);
+        color: $color-footer-link;
     }
 
     to {
-        color: var(--accent-color);
+        color: $accent-color;
     }
 }
 
 @keyframes portfolioCategoryHover {
     from {
-        background-color: var(--color-portfolio-categories);
-        color: var(--color-text-primary);
+        background-color: $color-portfolio-categories;
+        color: $color-text-primary;
     }
 
     to {
-        background-color: var(--brand-color);
-        color: var(--color-text-light);
+        background-color: $brand-color;
+        color: $color-text-light;
     }
 }
 
@@ -124,11 +124,11 @@
 
 @keyframes changeFillToPrimary {
     from {
-        fill: var(--color-text-muted);
+        fill: $color-text-muted;
     }
 
     to {
-        fill: var(--color-button-primary);
+        fill: $color-button-primary;
     }
 }
 
@@ -174,20 +174,20 @@
 
 @keyframes changeFillToAccent {
     from {
-        fill: #000000;
+        fill: $color-text-dark;
     }
 
     to {
-        fill: var(--accent-color);
+        fill: $accent-color;
     }
 }
 
 @keyframes changeBorderToAccent {
     from {
-        border-color: rgba(33, 33, 33, 0.2);
+        border-color: rgba($color-text-primary, 0.2);
     }
 
     to {
-        border-color: var(--accent-color);
+        border-color: $accent-color;
     }
 }

@@ -32,3 +32,28 @@
     --font-family: "Roboto", sans-serif;
     --second-family: "Raleway", sans-serif;
 }
+
+// SASS-змінні
+
+// Colors
+$color-primary: #2196f3;
+$color-secondary: #212121;
+$color-accent: #757575;
+
+$color-bg-light: #ffffff;
+$color-bg-dark: #2f303a;
+$color-border: #ececec;
+
+$color-team-bg: #f5f4fa;
+$color-icon-muted: #afb1b8;
+$color-footer-link: rgba(255, 255, 255, 0.6);
+
+// Fonts
+$font-main: 'Roboto', sans-serif;
+$font-logo: 'Raleway', sans-serif;
+
+// Font weights
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+$fw-black: 900;

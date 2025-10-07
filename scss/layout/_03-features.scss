@@ -1,82 +1,53 @@
-/* Features */
-
 .features {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
+    padding: 94px 0;
 
-.features-list {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
 
-.features-title {
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--color-text-primary);
-    margin-top: 0;
-    margin-bottom: 10px;
-}
+    &__item {
+        flex-basis: calc((100% - 90px) / 4);
 
-.features-text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 171%;
-    letter-spacing: 0.03em;
-    color: var(--color-text-muted);
-}
+        &::before {
+            content: '';
+            display: block;
+            height: 120px;
+            margin-bottom: 30px;
+            background-color: $color-team-bg;
+            background-size: 70px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
 
-.features-item::before {
-    background-color: var(--color-team-bg);
-}
+        &:nth-child(1)::before {
+            background-image: url('../img/antenna.webp');
+        }
 
-.features-item:nth-child(1)::before {
-    content: "";
-    display: block;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 20px;
-    background-image: url("../img/antenna.webp");
-    background-size: 70px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+        &:nth-child(2)::before {
+            background-image: url('../img/clock.webp');
+        }
 
-.features-item:nth-child(2)::before {
-    content: "";
-    display: block;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 20px;
-    background-image: url("../img/clock.webp");
-    background-size: 70px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+        &:nth-child(3)::before {
+            background-image: url('../img/diagram.webp');
+        }
 
-.features-item:nth-child(3)::before {
-    content: "";
-    display: block;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 20px;
-    background-image: url("../img/diagram.webp");
-    background-size: 70px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+        &:nth-child(4)::before {
+            background-image: url('../img/astronaut.webp');
+        }
+    }
 
-.features-item:nth-child(4)::before {
-    content: "";
-    display: block;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 20px;
-    background-image: url("../img/astronaut.webp");
-    background-size: 70px;
-    background-repeat: no-repeat;
-    background-position: center;
+    &__subtitle {
+        font-weight: $fw-bold;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $color-secondary;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.71;
+        color: $color-accent;
+    }
 }

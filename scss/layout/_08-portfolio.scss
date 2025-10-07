@@ -1,137 +1,116 @@
-/* Portfolio */
-
-.portfolio__category {
-    width: auto;
-    height: 38px;
-    border-radius: 4px;
-    background: var(--color-portfolio-categories);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 162%;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: var(--color-text-primary);
-    display: flex;
-    align-items: center;
-    padding: 6px 22px;
-}
-
-.portfolio__category:hover,
-.portfolio__category.current {
-    animation: portfolioCategoryHover 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.portfolio-item {
-    width: 370px;
-    height: 404px;
-    border: 1px solid var(--color-border);
-}
-
-.portfolio-image {
-    width: 370px;
-    height: 270px;
-}
-
-.portfolio__title {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 200%;
-    letter-spacing: 0.06em;
-    color: var(--color-text-primary);
-}
-
-.portfolio__description {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 187%;
-    letter-spacing: 0.03em;
-    color: var(--color-text-muted);
-}
-
-.portfolio-filters {
+.filters {
     padding-top: 94px;
-    padding-bottom: 50px;
-}
 
-.portfolio__categories {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-}
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 50px;
+    }
 
-.portfolio__button {
-    padding: 6px;
-    border: none;
-    text-align: center;
-    cursor: pointer;
-    background: transparent;
-    color: inherit;
+    &__button {
+        padding: 6px 22px;
+        border: none;
+        border-radius: 4px;
+        background-color: $color-team-bg;
+        color: $color-secondary;
+        font-weight: $fw-medium;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+            color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus,
+        &--current {
+            background-color: $color-primary;
+            color: $color-bg-light;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        }
+    }
 }
 
 .portfolio {
-    padding-top: 0;
     padding-bottom: 94px;
-}
 
-.portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-}
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 
-.portfolio-item {
-    margin-bottom: 0;
-    border: 1px solid var(--color-border);
-    flex-basis: calc((100% - 60px) / 3);
-}
+    &__item {
+        flex-basis: calc((100% - 60px) / 3);
 
-.portfolio__image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
+        &:hover,
+        &:focus-within {
 
-.portfolio-item-info {
-    padding: 20px 24px;
-    border-top: none;
-}
+            // focus-within для доступності
+            .portfolio__overlay {
+                transform: translateY(0);
+            }
+        }
+    }
 
-.portfolio__title {
-    margin-top: 20px;
-    margin-bottom: 4px;
-    padding-left: 24px;
-}
+    &__link {
+        display: block;
+        transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
-.portfolio__description {
-    margin-top: 0;
-    padding-left: 24px;
-}
+        &:hover,
+        &:focus {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+    }
 
-.portfolio-item-wrapper {
-    position: relative;
-    overflow: hidden;
-}
+    &__thumb {
+        position: relative;
+        overflow: hidden;
+    }
 
-.portfolio-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 150, 243, 0.9);
-    display: flex;
-    align-items: center;
-    padding: 0 24px;
-    transform: translateY(100%);
-}
+    &__image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
 
-.portfolio-item:hover .portfolio-overlay {
-    animation: slideInFromBottom 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 63px 24px;
+        background-color: rgba(33, 150, 243, 0.9);
+        transform: translateY(100%);
+        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-.portfolio-overlay-text {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #fff;
+    &__overlay-text {
+        font-size: 18px;
+        line-height: 1.56;
+        color: $color-bg-light;
+    }
+
+
+    &__content {
+        padding: 20px 24px;
+        border: 1px solid $color-border;
+        border-top: none;
+    }
+
+    &__title {
+        font-weight: $fw-bold;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        color: $color-secondary;
+        margin-bottom: 4px;
+    }
+
+    &__category {
+        font-size: 16px;
+        line-height: 1.88;
+        color: $color-accent;
+    }
 }

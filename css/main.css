@@ -65,13 +65,20 @@ button {
   --second-family: "Raleway", sans-serif;
 }
 
+/* Colors */
+/* Background Colors */
+/* Text Colors */
+/* Border Colors */
+/* Icon & Customer Colors */
+/* Button Colors */
+/* Fonts */
 /* Animations */
 @keyframes changeColorToPrimary {
   from {
-    color: var(--color-text-primary);
+    color: #212121;
   }
   to {
-    color: var(--color-button-primary);
+    color: #2196F3;
   }
 }
 @keyframes scaleXFull {
@@ -84,15 +91,15 @@ button {
 }
 @keyframes heroButtonHover {
   from {
-    background-color: var(--color-button-primary);
+    background-color: #2196F3;
   }
   to {
-    background-color: var(--color-button-primary-hover);
+    background-color: #0056b3;
   }
 }
 @keyframes changeBgToPrimary {
   from {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
   to {
     background-color: #2196F3;
@@ -103,41 +110,41 @@ button {
     fill: #AFB1B8;
   }
   to {
-    fill: #FFFFFF;
+    fill: #ffffff;
   }
 }
 @keyframes changeBorderToBrand {
   from {
-    border-color: var(--customer-color);
+    border-color: #AFB1B8;
   }
   to {
-    border-color: var(--brand-color);
+    border-color: #2196F3;
   }
 }
 @keyframes changeFillToBrand {
   from {
-    fill: var(--customer-color);
+    fill: #AFB1B8;
   }
   to {
-    fill: var(--brand-color);
+    fill: #2196F3;
   }
 }
 @keyframes changeColorToAccent {
   from {
-    color: var(--color-footer-link);
+    color: #ACACB0;
   }
   to {
-    color: var(--accent-color);
+    color: #2196F3;
   }
 }
 @keyframes portfolioCategoryHover {
   from {
-    background-color: var(--color-portfolio-categories);
-    color: var(--color-text-primary);
+    background-color: #f5f4fa;
+    color: #212121;
   }
   to {
-    background-color: var(--brand-color);
-    color: var(--color-text-light);
+    background-color: #2196F3;
+    color: #ffffff;
   }
 }
 @keyframes slideInFromBottom {
@@ -166,10 +173,10 @@ button {
 }
 @keyframes changeFillToPrimary {
   from {
-    fill: var(--color-text-muted);
+    fill: #757575;
   }
   to {
-    fill: var(--color-button-primary);
+    fill: #2196F3;
   }
 }
 @keyframes fadeIn {
@@ -209,7 +216,7 @@ button {
     fill: #000000;
   }
   to {
-    fill: var(--accent-color);
+    fill: #2196F3;
   }
 }
 @keyframes changeBorderToAccent {
@@ -217,7 +224,7 @@ button {
     border-color: rgba(33, 33, 33, 0.2);
   }
   to {
-    border-color: var(--accent-color);
+    border-color: #2196F3;
   }
 }
 body {
