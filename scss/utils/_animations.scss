@@ -1,12 +1,10 @@
-/* Animations */
-
 @keyframes changeColorToPrimary {
     from {
-        color: $color-text-primary;
+        color: $text-primary;
     }
 
     to {
-        color: $color-button-primary;
+        color: $accent-color;
     }
 }
 
@@ -22,37 +20,37 @@
 
 @keyframes heroButtonHover {
     from {
-        background-color: $color-button-primary;
+        background-color: $brand-color;
     }
 
     to {
-        background-color: $color-button-primary-hover;
+        background-color: $button-active-color;
     }
 }
 
 @keyframes changeBgToPrimary {
     from {
-        background-color: $color-bg-light;
+        background-color: $bg-light;
     }
 
     to {
-        background-color: $brand-color;
+        background-color: $accent-color;
     }
 }
 
 @keyframes changeFillToWhite {
     from {
-        fill: $color-icon-muted;
+        fill: $icon-primary;
     }
 
     to {
-        fill: $color-text-light;
+        fill: $text-light;
     }
 }
 
 @keyframes changeBorderToBrand {
     from {
-        border-color: $customer-color;
+        border-color: $border-customer;
     }
 
     to {
@@ -62,7 +60,7 @@
 
 @keyframes changeFillToBrand {
     from {
-        fill: $customer-color;
+        fill: $border-customer;
     }
 
     to {
@@ -72,7 +70,7 @@
 
 @keyframes changeColorToAccent {
     from {
-        color: $color-footer-link;
+        color: $text-footer-link;
     }
 
     to {
@@ -82,13 +80,13 @@
 
 @keyframes portfolioCategoryHover {
     from {
-        background-color: $color-portfolio-categories;
-        color: $color-text-primary;
+        background-color: $bg-light-section;
+        color: $text-primary;
     }
 
     to {
         background-color: $brand-color;
-        color: $color-text-light;
+        color: $text-light;
     }
 }
 
@@ -124,57 +122,17 @@
 
 @keyframes changeFillToPrimary {
     from {
-        fill: $color-text-muted;
+        fill: $text-secondary;
     }
 
     to {
-        fill: $color-button-primary;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes scaleIn {
-    from {
-        transform: translate(-50%, -50%) scale(0);
-    }
-
-    to {
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
-
-@keyframes scaleOut {
-    from {
-        transform: translate(-50%, -50%) scale(1);
-    }
-
-    to {
-        transform: translate(-50%, -50%) scale(0);
+        fill: $brand-color;
     }
 }
 
 @keyframes changeFillToAccent {
     from {
-        fill: $color-text-dark;
+        fill: $text-dark;
     }
 
     to {
@@ -184,7 +142,7 @@
 
 @keyframes changeBorderToAccent {
     from {
-        border-color: rgba($color-text-primary, 0.2);
+        border-color: $border-input;
     }
 
     to {

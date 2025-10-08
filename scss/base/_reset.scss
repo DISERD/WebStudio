@@ -1,4 +1,3 @@
-/* CSS Reset */
 h1,
 h2,
 h3,
@@ -19,7 +18,6 @@ address {
 a {
     color: inherit;
     text-decoration: none;
-    cursor: pointer;
 }
 
 img {
@@ -33,5 +31,5 @@ button {
     border: none;
     font-family: inherit;
     cursor: pointer;
-    text-align: center;
+    padding: 0;
 }

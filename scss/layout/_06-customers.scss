@@ -1,34 +1,42 @@
 .customers {
-    padding: 94px 0;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
-    &__list {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
+.customers__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.customer__title {
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $text-primary;
+    padding-bottom: 50px;
+}
+
+.customers__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $border-customer;
+    border-radius: 4px;
+    transition: border-color $transition-duration $transition-timing-function;
+
+    &:hover {
+        animation: changeBorderToBrand $transition-duration $transition-timing-function forwards;
     }
 
-    &__link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 170px;
-        height: 92px;
-        border: 1px solid $color-icon-muted;
-        border-radius: 4px;
-        transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-
-        &:hover,
-        &:focus {
-            border-color: $color-primary;
-
-            .customers__icon {
-                fill: $color-primary;
-            }
-        }
+    &:hover .customers__icon {
+        animation: changeFillToBrand $transition-duration $transition-timing-function forwards;
     }
+}
 
-    &__icon {
-        fill: $color-icon-muted;
-        transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+.customers__icon {
+    margin: 16px 32px;
+    fill: $border-customer;
+    transition: fill $transition-duration $transition-timing-function;
 }

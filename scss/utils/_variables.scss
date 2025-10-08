@@ -1,59 +1,41 @@
-:root {
-    --accent-color: #2196F3;
+//================ Variables ================
 
-    /* Logo Colors */
-    --brand-color: #2196F3;
-    --color-bg-light: #ffffff;
-    --color-bg-dark: #000000;
+// Primary Colors
+$accent-color: #2196F3;
+$brand-color: #2196F3;
+$button-hover-color: #188CE8;
+$button-active-color: #1464A5;
 
-    /* Background Colors */
-    --color-hero-bg: #2F303A;
-    --color-team-bg: #F5F4FA;
-    --color-footer-bg: #2F303A;
-    --color-border: #ECECEC;
+// Text Colors
+$text-primary: #212121;
+$text-secondary: #757575;
+$text-light: #FFFFFF;
+$text-dark: #000000;
+$text-footer-link: rgba(255, 255, 255, 0.6);
 
-    /* Text Colors */
-    --color-text-light: #ffffff;
-    --color-text-dark: #000000;
-    --color-text-primary: #212121;
-    --color-text-muted: #757575;
-    --color-footer-link: #ACACB0;
+// Background Colors
+$bg-light: #FFFFFF;
+$bg-dark-section: #2F303A;
+$bg-light-section: #F5F4FA;
+$features-bg-color: #F5F4FA;
 
-    /* Icons */
-    --color-icon-muted: #AFB1B8;
-    --customer-color: #AFB1B8;
+$bg-footer: #2F303A;
+$bg-overlay: rgba(33, 150, 243, 0.9);
+$bg-hero-overlay: rgba(47, 48, 58, 0.4);
 
-    /* Buttons */
-    --color-button-primary: #2196F3;
-    --color-button-primary-hover: #0056b3;
-    --color-portfolio-categories: #f5f4fa;
+// Border Colors
+$border-header: #ECECEC;
+$border-portfolio: #EEEEEE;
+$border-input: rgba(33, 33, 33, 0.2);
+$border-customer: #AFB1B8;
 
-    /* Fonts */
-    --font-family: "Roboto", sans-serif;
-    --second-family: "Raleway", sans-serif;
-}
+// Icon Colors
+$icon-primary: #AFB1B8;
 
-// SASS-змінні
+// Font Stacks
+$font-primary: "Roboto", sans-serif;
+$font-logo: "Raleway", sans-serif;
 
-// Colors
-$color-primary: #2196f3;
-$color-secondary: #212121;
-$color-accent: #757575;
-
-$color-bg-light: #ffffff;
-$color-bg-dark: #2f303a;
-$color-border: #ececec;
-
-$color-team-bg: #f5f4fa;
-$color-icon-muted: #afb1b8;
-$color-footer-link: rgba(255, 255, 255, 0.6);
-
-// Fonts
-$font-main: 'Roboto', sans-serif;
-$font-logo: 'Raleway', sans-serif;
-
-// Font weights
-$fw-regular: 400;
-$fw-medium: 500;
-$fw-bold: 700;
-$fw-black: 900;
+// Animation & Transition
+$transition-duration: 250ms;
+$transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

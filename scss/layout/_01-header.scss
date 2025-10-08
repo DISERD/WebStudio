@@ -1,50 +1,42 @@
 .header {
     padding-top: 24px;
     padding-bottom: 25px;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid $border-header;
 }
 
-.header>.container {
+.header__container {
     display: flex;
     align-items: center;
 }
 
-.contacts {
+.header__contacts {
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
     margin-left: auto;
     gap: 50px;
 }
 
-.contacts-link {
-    @include flex-center(10px);
-    @include text-style(500, 14px, 1.14, 0.02em, $color-text-muted);
-    @include transition(color);
+.header__contacts-link {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: $text-secondary;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color $transition-duration $transition-timing-function;
 
-    &:hover,
-    &:focus {
-        color: $accent-color;
+    &:hover {
+        animation: changeColorToPrimary $transition-duration $transition-timing-function forwards;
+    }
 
-        .icon-email,
-        .icon-smartphone {
-            fill: $accent-color;
-        }
+    &:hover .header__contacts-icon {
+        animation: changeFillToPrimary $transition-duration $transition-timing-function forwards;
     }
 }
 
-.icon-email,
-.icon-smartphone {
-    fill: currentColor;
-    @include transition(fill);
-}
-
-.icon-email {
-    width: 16px;
-    height: 12px;
-}
-
-.icon-smartphone {
-    width: 10px;
-    height: 16px;
+.header__contacts-icon {
+    width: 18px;
+    height: 18px;
+    fill: $text-secondary;
+    transition: fill $transition-duration $transition-timing-function;
 }
