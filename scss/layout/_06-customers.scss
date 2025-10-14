@@ -1,42 +1,32 @@
 .customers {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.customers__list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+    @extend %section-padding;
 }
 
 .customer__title {
-    font-weight: 700;
-    font-size: 36px;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: $text-primary;
-    padding-bottom: 50px;
+    @extend %section-title;
+}
+
+.customers__list {
+    @include flex-settings($justify: center, $gap: 30px);
 }
 
 .customers__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-settings($align: center, $justify: center);
+    @include transition(border-color);
     border: 1px solid $border-customer;
     border-radius: 4px;
-    transition: border-color $transition-duration $transition-timing-function;
 
     &:hover {
-        animation: changeBorderToBrand $transition-duration $transition-timing-function forwards;
+        @include animation(changeBorderToBrand);
     }
 
     &:hover .customers__icon {
-        animation: changeFillToBrand $transition-duration $transition-timing-function forwards;
+        @include animation(changeFillToBrand);
     }
 }
 
 .customers__icon {
+    @include transition(fill);
     margin: 16px 32px;
     fill: $border-customer;
-    transition: fill $transition-duration $transition-timing-function;
 }

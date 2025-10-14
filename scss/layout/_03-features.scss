@@ -1,11 +1,9 @@
 .features {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @extend %section-padding;
 }
 
 .features__list {
-    display: flex;
-    gap: 30px;
+    @include flex-settings($gap: 30px);
 }
 
 .features__subtitle {
@@ -24,57 +22,18 @@
     color: $text-secondary;
 }
 
-/* Pseudoclasses */
-
-.features__item::before {
-    background-color: $features-bg-color;
-    border-radius: 2%;
-}
-
 .features__item:nth-child(1)::before {
-    content: "";
-    display: block;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 20px;
-    background-image: url("../img/antenna.webp");
-    background-size: 70px;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include feature-icon("../img/antenna.webp");
 }
 
 .features__item:nth-child(2)::before {
-    content: "";
-    display: block;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 20px;
-    background-image: url("../img/clock.webp");
-    background-size: 70px;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include feature-icon("../img/clock.webp");
 }
 
 .features__item:nth-child(3)::before {
-    content: "";
-    display: block;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 20px;
-    background-image: url("../img/diagram.webp");
-    background-size: 70px;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include feature-icon("../img/diagram.webp");
 }
 
 .features__item:nth-child(4)::before {
-    content: "";
-    display: block;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 20px;
-    background-image: url("../img/astronaut.webp");
-    background-size: 70px;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include feature-icon("../img/astronaut.webp");
 }

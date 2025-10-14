@@ -5,38 +5,34 @@
 }
 
 .header__container {
-    display: flex;
-    align-items: center;
+    @include flex-settings($align: center);
 }
 
 .header__contacts {
-    display: flex;
+    @include flex-settings($gap: 50px);
     margin-left: auto;
-    gap: 50px;
 }
 
 .header__contacts-link {
+    @include flex-settings($align: center, $gap: 10px);
+    @include transition(color);
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.02em;
     color: $text-secondary;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: color $transition-duration $transition-timing-function;
 
     &:hover {
-        animation: changeColorToPrimary $transition-duration $transition-timing-function forwards;
+        @include animation(changeColorToPrimary);
     }
 
     &:hover .header__contacts-icon {
-        animation: changeFillToPrimary $transition-duration $transition-timing-function forwards;
+        @include animation(changeFillToPrimary);
     }
 }
 
 .header__contacts-icon {
+    @include transition(fill);
     width: 18px;
     height: 18px;
     fill: $text-secondary;
-    transition: fill $transition-duration $transition-timing-function;
 }

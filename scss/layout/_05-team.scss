@@ -1,21 +1,14 @@
 .team {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @extend %section-padding;
     background-color: $bg-light-section;
 }
 
 .team__title {
-    font-weight: 700;
-    font-size: 36px;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: $text-primary;
-    padding-bottom: 50px;
+    @extend %section-title;
 }
 
 .team__list {
-    display: flex;
-    gap: 30px;
+    @include flex-settings($gap: 30px);
 }
 
 .team__card {

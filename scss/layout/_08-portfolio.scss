@@ -4,9 +4,7 @@
 }
 
 .filters__list {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
+    @include flex-settings($justify: center, $gap: 8px);
 }
 
 .portfolio {
@@ -14,22 +12,21 @@
 }
 
 .portfolio__list {
-    display: flex;
+    @include flex-settings($gap: 30px);
     flex-wrap: wrap;
-    gap: 30px;
 }
 
 .portfolio__item {
+    @include transition(box-shadow);
     border: 1px solid $border-header;
     flex-basis: calc((100% - 60px) / 3);
-    transition: box-shadow $transition-duration $transition-timing-function;
 
     &:hover {
-        animation: addPortfolioShadow $transition-duration $transition-timing-function forwards;
+        @include animation(addPortfolioShadow);
     }
 
     &:hover .portfolio__overlay {
-        animation: slideInFromBottom $transition-duration $transition-timing-function forwards;
+        @include animation(slideInFromBottom);
     }
 }
 
@@ -44,6 +41,7 @@
 }
 
 .portfolio__overlay {
+    @include transition(transform);
     position: absolute;
     top: 0;
     left: 0;
@@ -52,7 +50,6 @@
     background-color: rgba(33, 150, 243, 0.9);
     padding: 63px 24px;
     transform: translateY(100%);
-    transition: transform $transition-duration $transition-timing-function;
 }
 
 .portfolio__overlay-text {

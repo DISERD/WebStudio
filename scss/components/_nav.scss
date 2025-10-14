@@ -3,8 +3,7 @@
 }
 
 .header__nav-list {
-    display: flex;
-    gap: 50px;
+    @include flex-settings($gap: 50px);
 }
 
 .header__nav-link {
@@ -13,7 +12,7 @@
     letter-spacing: 0.02em;
     color: $text-primary;
     position: relative;
-    transition: color $transition-duration $transition-timing-function;
+    @include transition(color);
 
     &::after {
         content: "";
@@ -25,16 +24,16 @@
         border-radius: 2px;
         background-color: $accent-color;
         transform: scaleX(0);
-        transition: transform $transition-duration $transition-timing-function;
+        @include transition(transform);
     }
 
     &:hover,
     &.current {
-        animation: changeColorToPrimary $transition-duration $transition-timing-function forwards;
+        @include animation(changeColorToPrimary);
     }
 
     &:hover::after,
     &.current::after {
-        animation: scaleXFull $transition-duration $transition-timing-function forwards;
+        @include animation(scaleXFull);
     }
 }

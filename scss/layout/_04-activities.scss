@@ -3,15 +3,11 @@
 }
 
 .activities__title {
-    margin-bottom: 50px;
-    font-weight: 700;
-    font-size: 36px;
-    text-align: center;
+    @extend %section-title;
 }
 
 .activities__list {
-    display: flex;
-    gap: 30px;
+    @include flex-settings($gap: 30px);
 }
 
 .activities__item {
