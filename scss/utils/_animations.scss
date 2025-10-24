@@ -24,7 +24,7 @@
     }
 
     to {
-        background-color: $button-active-color;
+        background-color: $button-hover-color;
     }
 }
 
@@ -147,5 +147,15 @@
 
     to {
         border-color: $accent-color;
+    }
+}
+
+@keyframes iconHoverFill {
+    from {
+        fill: $icon-primary;
+    }
+
+    to {
+        fill: $accent-color;
     }
 }

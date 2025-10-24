@@ -1,7 +1,7 @@
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/background.webp);
+    background-image: linear-gradient($bg-hero-overlay, $bg-hero-overlay), url(../img/background.webp);
 }
 
 .hero__container {
@@ -16,8 +16,4 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $text-light;
-}
-
-.hero__button {
-    margin: 0 auto;
 }

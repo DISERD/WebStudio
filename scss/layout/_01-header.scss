@@ -1,6 +1,5 @@
 .header {
-    padding-top: 24px;
-    padding-bottom: 25px;
+    background-color: $bg-light;
     border-bottom: 1px solid $border-header;
 }
 
@@ -8,31 +7,70 @@
     @include flex-settings($align: center);
 }
 
+.header .logo {
+    @media screen and (min-width: 768px) {
+        margin-right: 88px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+    }
+}
+
 .header__contacts {
-    @include flex-settings($gap: 50px);
-    margin-left: auto;
+    margin-left: 60px;
+    display: none;
+
+
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+
+    @media screen and (min-width: 1200px) {
+        @include flex-settings;
+        margin-left: auto;
+    }
+}
+
+.header__contacts-item:not(:last-child) {
+    @media screen and (min-width: 768px) {
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 50px;
+        margin-bottom: 0;
+    }
 }
 
 .header__contacts-link {
     @include flex-settings($align: center, $gap: 10px);
-    @include transition(color);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: calc(14 / 12);
     letter-spacing: 0.02em;
-    color: $text-secondary;
 
-    &:hover {
-        @include animation(changeColorToPrimary);
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: calc(16 / 14);
     }
 
-    &:hover .header__contacts-icon {
-        @include animation(changeFillToPrimary);
+    color: $text-secondary;
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
     }
 }
 
 .header__contacts-icon {
-    @include transition(fill);
-    width: 18px;
-    height: 18px;
-    fill: $text-secondary;
+    fill: currentColor;
+    &[width="18"][height="18"] {
+
+        @media screen and (max-width: 1199px) {
+            width: 14px; height: 10px;
+            width: 10px; height: 14px;
+        }
+    }
 }

@@ -22,3 +22,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+// Новий міксін для секцій
+@mixin section($pt: 60px, $pb: 60px) {
+    padding-top: $pt;
+    padding-bottom: $pb;
+}
+
+// Міксін для фонових зображень
+@mixin feature-icon($image-url, $size: 70px, $position: center, $repeat: no-repeat) {
+    background-image: url(#{$image-url});
+    background-size: $size;
+    background-position: $position;
+    background-repeat: $repeat;
+}

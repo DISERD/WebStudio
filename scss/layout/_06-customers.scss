@@ -1,32 +1,64 @@
 .customers {
-    @extend %section-padding;
+    @include section;
+
+    @media screen and (min-width: 1200px) {
+        @include section(94px, 94px);
+    }
+    background-color: $bg-light;
 }
 
 .customer__title {
     @extend %section-title;
+    margin-bottom: 60px;
 }
 
 .customers__list {
-    @include flex-settings($justify: center, $gap: 30px);
+    @include flex-settings($align: center, $justify: center);
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.customers__item {
+    @media screen and (max-width: 767px) {
+        --items: 2;
+    }
+
+    @media screen and (min-width: 768px) {
+        --items: 3;
+    }
+
+    @media screen and (min-width: 1200px) {
+        --items: 6;
+    }
+
+    flex-basis: calc((100% - (var(--items) - 1) * 30px) / var(--items));
 }
 
 .customers__link {
     @include flex-settings($align: center, $justify: center);
-    @include transition(border-color);
+    max-width: 210px;
+    height: 92px;
     border: 1px solid $border-customer;
     border-radius: 4px;
+    color: $border-customer;
+    @include transition(color);
+    @include transition(border-color);
 
-    &:hover {
-        @include animation(changeBorderToBrand);
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+        color: $accent-color;
     }
 
-    &:hover .customers__icon {
-        @include animation(changeFillToBrand);
+    @media screen and (min-width: 768px) {
+        width: 226px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 170px;
     }
 }
 
 .customers__icon {
-    @include transition(fill);
-    margin: 16px 32px;
-    fill: $border-customer;
+    fill: currentColor;
 }

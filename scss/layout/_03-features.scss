@@ -1,39 +1,83 @@
 .features {
-    @extend %section-padding;
+    @include section;
+
+    @media screen and (min-width: 1200px) {
+        @include section(94px, 0);
+    }
+
+    background-color: $bg-light;
+}
+
+.features__title {
+    @extend %section-title;
+    margin-bottom: 60px;
 }
 
 .features__list {
+    --items: 1;
     @include flex-settings($gap: 30px);
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 768px) {
+        --items: 2;
+    }
+
+    @media screen and (min-width: 1200px) {
+        --items: 4;
+        flex-wrap: nowrap; 
+    }
 }
 
+.features__item {
+    &::before {
+        content: '';
+        display: block;
+        height: 120px;
+        margin-bottom: 30px;
+        background-color: $features-bg-color;
+        border-radius: 4px;
+    }
+
+    &:nth-child(1)::before {
+        @include feature-icon("../img/antenna.webp");
+    }
+
+    &:nth-child(2)::before {
+        @include feature-icon("../img/clock.webp");
+    }
+
+    &:nth-child(3)::before {
+        @include feature-icon("../img/diagram.webp");
+    }
+
+    &:nth-child(4)::before {
+        @include feature-icon("../img/astronaut.webp");
+    }
+}
+
+
 .features__subtitle {
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
-    letter-spacing: 0.03em;
+    line-height: calc(16 / 14);
     text-transform: uppercase;
-    color: $text-primary;
-    margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
 }
 
 .features__text {
-    font-size: 14px;
-    line-height: 171%;
-    letter-spacing: 0.03em;
+    width: 100%;
+    line-height: calc(24 / 14);
     color: $text-secondary;
-}
 
-.features__item:nth-child(1)::before {
-    @include feature-icon("../img/antenna.webp");
-}
+    @media screen and (min-width: 768px) {
+        width: 354px;
+    }
 
-.features__item:nth-child(2)::before {
-    @include feature-icon("../img/clock.webp");
-}
-
-.features__item:nth-child(3)::before {
-    @include feature-icon("../img/diagram.webp");
-}
-
-.features__item:nth-child(4)::before {
-    @include feature-icon("../img/astronaut.webp");
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+    }
 }
