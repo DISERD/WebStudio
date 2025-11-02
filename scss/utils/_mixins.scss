@@ -23,7 +23,7 @@
     transform: translate(-50%, -50%);
 }
 
-// Новий міксін для секцій
+// Новий міксин для секцій
 @mixin section($pt: 60px, $pb: 60px) {
     padding-top: $pt;
     padding-bottom: $pb;
@@ -35,4 +35,12 @@
     background-size: $size;
     background-position: $position;
     background-repeat: $repeat;
+}
+
+// Новий міксин для налаштування шрифтів
+@mixin font-settings($size, $weight: 500, $spacing: 0.02em, $height: null) {
+    font-family: $font-primary;
+    font-weight: $weight;
+    font-size: $size;
+    letter-spacing: $spacing;
 }

@@ -38,19 +38,18 @@
     line-height: 1.87;
     letter-spacing: 0.06em;
 }
-    
+
 %form-field {
     width: 100%;
     border: 1px solid $border-input;
     border-radius: 4px;
     outline: none;
-    
+
     &:hover,
     &:focus {
         border-color: $accent-color;
     }
 }
-
 
 %call-text {
     margin-bottom: 20px;
