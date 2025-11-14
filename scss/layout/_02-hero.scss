@@ -1,7 +1,54 @@
 .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-image: linear-gradient($bg-hero-overlay, $bg-hero-overlay), url(../img/background.webp);
+    // Мобільний 1x
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-color: #2F303A; 
+    background-image: linear-gradient($bg-hero-overlay, $bg-hero-overlay),
+        url(../img/hero/hero-mobile@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    // Мобільний 2x
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: linear-gradient($bg-hero-overlay, $bg-hero-overlay),
+            url(../img/hero/hero-mobile@2x.jpg);
+    }
+
+    // Планшет 1x
+    @media screen and (min-width: $tablet) {
+        background-image: linear-gradient($bg-hero-overlay, $bg-hero-overlay),
+            url(../img/hero/hero-tablet@1x.jpg);
+    }
+
+    // Планшет 2x
+    @media screen and (min-width: $tablet) and (min-device-pixel-ratio: 2),
+    screen and (min-width: $tablet) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: $tablet) and (min-resolution: 192dpi),
+    screen and (min-width: $tablet) and (min-resolution: 2dppx) {
+        background-image: linear-gradient($bg-hero-overlay, $bg-hero-overlay),
+            url(../img/hero/hero-tablet@2x.jpg);
+    }
+
+    // Десктоп 1x
+    @media screen and (min-width: $desktop) {
+        padding-top: 200px; 
+        padding-bottom: 200px;
+        background-image: linear-gradient($bg-hero-overlay, $bg-hero-overlay),
+            url(../img/hero/hero-desktop@1x.jpg);
+    }
+
+    // Десктоп 2x
+    @media screen and (min-width: $desktop) and (min-device-pixel-ratio: 2),
+    screen and (min-width: $desktop) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: $desktop) and (min-resolution: 192dpi),
+    screen and (min-width: $desktop) and (min-resolution: 2dppx) {
+        background-image: linear-gradient($bg-hero-overlay, $bg-hero-overlay),
+            url(../img/hero/hero-desktop@2x.jpg);
+    }
 }
 
 .hero__container {
@@ -11,9 +58,14 @@
 .hero__title {
     margin-bottom: 30px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 136%;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $text-light;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }
