@@ -159,3 +159,19 @@
         fill: $accent-color;
     }
 }
+
+@keyframes customerLinkHover {
+    from {
+        border-color: $border-customer;
+        color: $border-customer;
+        transform: translateY(0) scale(1);
+        box-shadow: none;
+    }
+
+    to {
+        border-color: $accent-color;
+        color: $accent-color;
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 10px 20px rgba($accent-color, 0.12);
+    }
+}

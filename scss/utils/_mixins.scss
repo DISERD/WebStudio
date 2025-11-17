@@ -44,3 +44,11 @@
     font-size: $size;
     letter-spacing: $spacing;
 }
+
+// Міксін для ефекту наведення на посилання клієнтів
+@mixin customer-link-hover {
+    border-color: $accent-color;
+    color: $accent-color;
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 10px 20px rgba($accent-color, 0.12);
+}

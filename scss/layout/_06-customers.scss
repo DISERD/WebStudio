@@ -46,8 +46,8 @@
 
     &:hover,
     &:focus {
-        border-color: $accent-color;
-        color: $accent-color;
+        @include animation(customer-link-hover);
+        @include animation(customerLinkHover);
     }
 
     @media screen and (min-width: 768px) {

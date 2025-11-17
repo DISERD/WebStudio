@@ -199,6 +199,20 @@ button {
     fill: #2196F3;
   }
 }
+@keyframes customerLinkHover {
+  from {
+    border-color: #AFB1B8;
+    color: #AFB1B8;
+    transform: translateY(0) scale(1);
+    box-shadow: none;
+  }
+  to {
+    border-color: #2196F3;
+    color: #2196F3;
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(33, 150, 243, 0.12);
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -1216,8 +1230,8 @@ body {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers__link:hover, .customers__link:focus {
-  border-color: #2196F3;
-  color: #2196F3;
+  animation: customer-link-hover 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: customerLinkHover 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 @media screen and (min-width: 768px) {
   .customers__link {
