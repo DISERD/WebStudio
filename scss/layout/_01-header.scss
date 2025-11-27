@@ -5,6 +5,7 @@
 
 .header__container {
     @include flex-settings($align: center);
+    padding: 0 15px; 
 }
 
 .header .logo {
@@ -18,9 +19,8 @@
 }
 
 .header__contacts {
-    margin-left: 60px;
     display: none;
-
+    margin-left: auto;
 
     @media screen and (min-width: 768px) {
         display: block;
@@ -28,7 +28,6 @@
 
     @media screen and (min-width: 1200px) {
         @include flex-settings;
-        margin-left: auto;
     }
 }
 
@@ -49,14 +48,13 @@
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.02em;
+    color: $text-secondary;
+    @include transition(color);
 
     @media screen and (min-width: 1200px) {
         font-size: 14px;
         line-height: calc(16 / 14);
     }
-
-    color: $text-secondary;
-    @include transition(color);
 
     &:hover,
     &:focus {
@@ -66,11 +64,9 @@
 
 .header__contacts-icon {
     fill: currentColor;
-    &[width="18"][height="18"] {
 
-        @media screen and (max-width: 1199px) {
-            width: 14px; height: 10px;
-            width: 10px; height: 14px;
-        }
+    @media screen and (max-width: 1199px) {
+        width: 10px;
+        height: 14px;
     }
 }

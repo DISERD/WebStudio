@@ -1,4 +1,3 @@
-
 .hero__button {
     @extend %button;
     width: 216px;
@@ -7,7 +6,6 @@
 
 .subscribe-form__button {
     @extend %button;
-
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -19,29 +17,23 @@
 .filters__list {
     display: flex;
     flex-wrap: wrap;
+    gap: 8px;
 
     @media screen and (min-width: $tablet) {
         justify-content: center;
     }
-
-    gap: 8px;
 }
 
 .filters__button {
     @extend %button;
-
     padding: 6px 22px;
-
     font-weight: 500;
     letter-spacing: 0.03em;
     text-align: center;
-
     color: $text-primary;
     background-color: $bg-light-section;
     box-shadow: none;
-
-    transition: color $anim-fast, background-color $anim-fast,
-        box-shadow $anim-fast;
+    transition: color $anim-fast, background-color $anim-fast, box-shadow $anim-fast;
 
     &:hover,
     &:focus {
@@ -52,24 +44,19 @@
     }
 }
 
-
 .modal__btn--close {
     position: absolute;
     top: 8px;
     right: 8px;
-
+    width: 30px;
+    height: 30px;
     padding: 0;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
-    width: 30px;
-    height: 30px;
-
     background-color: $bg-light;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-
     cursor: pointer;
 
     &:hover .modal__icon,
@@ -81,8 +68,7 @@
 
 .form__btn {
     @extend %button;
-
     display: block;
-    margin: 0 auto;
     padding: 10px 52px;
+    margin: 15px auto 0;
 }
