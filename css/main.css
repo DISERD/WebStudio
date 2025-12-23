@@ -58,7 +58,7 @@ button {
   cursor: pointer;
 }
 .form__btn:hover, .filters__button:hover, .subscribe-form__button:hover, .hero__button:hover, .form__btn:focus, .filters__button:focus, .subscribe-form__button:focus, .hero__button:focus {
-  background-color: #188CE8;
+  background-color: #0a6bba;
 }
 
 .footer__subtitle {
@@ -90,7 +90,7 @@ button {
     background-color: #2196F3;
   }
   to {
-    background-color: #188CE8;
+    background-color: #0a6bba;
   }
 }
 @keyframes changeBgToPrimary {
